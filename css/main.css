@@ -1,5 +1,44 @@
-p {
-    color:black;
-    font-family: Arial, Helvetica, sans-serif;
+/**
+Alex Scott
+INF 133 -> Midterm Project
+**/
+
+/* Source sans pro font that will be used for all text */
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+
+
+
+/************************/
+/* Basic CSS properties */
+/************************/
+html
+{
+    font-family: 'Source Sans Pro', sans-serif; /* default font */
+    font-weight: 300;   /* normal weight */
 }
+
+body
+{
+    background: #DAE2F8; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #D6A4A4, #DAE2F8); /* Chrome 10-25/Safari 5.1-6 */
+    background: linear-gradient(to left, #D6A4A4, #DAE2F8); /* W3C standard */
+    background-repeat: repeat, no-repeat;
+    background-size: auto, 100% 100%;
+    color: #777777;
+}
+
+strong, h1, h2, h3, h6
+{
+    font-weight: 400; /* bold weight */
+    color: #363636;
+}
+
+/* Images */
+.image img
+{
+    display: block;
+    width: 100%;
+}
+
+
 

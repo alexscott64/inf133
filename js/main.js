@@ -1,3 +1,9 @@
 /**
- * Created by Alex on 11/3/2016.
- */
+ Alex Scott
+ INF133 -> Midterm Project
+ **/
+$(document).ready(function(){
+   $("#nav").find("a").click(function(){
+       $(this).
+   });
+});

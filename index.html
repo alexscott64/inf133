@@ -1,11 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <title>Informatics 133 Midterm Project</title>
     <meta charset="UTF-8">
-    <title>Alex Scott - Informatics 133 Midterm Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alex Scott">
+
+    <!--
+    FontAwesome icons
+    =====
+        These are bootstrap glyphicons that can be shown
+        without the need to use ANY bootstrap functionality
+    -->
+    <script src="https://use.fontawesome.com/3c15b8f67e.js"></script>
+
+    <!-- Link / load relevant files -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js" async></script>
+
+
 </head>
 <body>
-<h1>Hello world</h1>
-<p>hi</p>
+
+    <!-- navigation menu -->
+    <nav id="nav">
+        <a href="#home" class="glyph fa fa-home active"><span>Home</span></a>
+        <a href="#portfolio" class="glyph fa fa-folder-o"><span>Portfolio</span></a>
+        <a href="#contact" class="glyph fa fa-envelope-o"><span>Contact Me</span></a>
+    </nav>
+
+    <!-- main wrapper holding all pages together -->
+    <div id="main">
+        <!-- Home -->
+        <article id="home" class="panel">
+            <header>
+                <h1>Alex Scott</h1>
+                <p> I write code to make life easier. I am currently a senior at University
+                    of California, Irvine and will be graduating with a B.S. in Computer Science in
+                    Fall 2016. I enjoy information retrieval, machine learning, data mining, and
+                    finding ways to make things faster. This is my midterm project site for
+                    Informatics 133. Hopefully I get an A
+                    <i class='glyph fa fa-smile-o'></i>
+                </p>
+            </header>
+            <div class="home-picture">
+                <img src="img/me.jpg" alt="">
+            </div>
+        </article>
+
+        <!-- Portfolio -->
+        <article id="portfolio" class="panel">
+            <header><h2>Portfolio</h2></header>
+            <p> Below is a simple list of the projects I have accomplished in Informatics 133
+                this quarter.
+            </p>
+            <section>
+                <div class="row">
+                    <div class="col-4 col-m-12">
+                        <h6>Codeacademy: HTML</h6>
+                        <p>I successfully did 100% of my HTML via CodeAcademy.</p>
+                    </div>
+                    <div class="col-4 col-m-12">
+                        <h6>Codeacademy: CSS</h6>
+                        <p>I successfully did 100% of my CSS via CodeAcademy.</p>
+                    </div>
+                    <div class="col-4 col-m-12">
+                        <h6>Codeacademy: JS</h6>
+                        <p>I successfully did 100% of my JS via CodeAcademy.</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- Contact -->
+        <article id="contact" class="panel">
+            <header><h2>Contact Me</h2></header>
+            <p>I can be reached via e-mail at <a href="MAILTO:agscott1@uci.edu">agscott1@uci.edu</a>. Feel free
+                to ask me any questions about my site, my work, or anything else for that matter.
+            </p>
+        </article>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>Alex Scott - <a href="https://alexscott64.github.io/inf133/">inf133 midterm project</a></p>
+    </footer>
+
 </body>
 </html>
