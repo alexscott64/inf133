@@ -14,8 +14,20 @@ function check_hash(hash, panels) {
     return (hash && hash in panels);
 }
 
-$(document).ready(function(){
+function restore_default_glyphicons() {
+    var $portfolio = $('nav a[href=#portfolio]');
+    var $contact =  $('nav a[href=#contact]');
+    if($portfolio.hasClass('fa-folder-open-o')) {
+        $portfolio.removeClass('fa-folder-open-o');
+        $portfolio.addClass('fa-folder-o');
+    }
+    if($contact.hasClass('fa-envelope-open-o')) {
+        $contact.removeClass('fa-envelope-open-o');
+        $contact.addClass('fa-envelope-o');
+    }
+}
 
+$(document).ready(function(){
 
     var $main = $('#main');
     var $panels = $main.find('.panel');
@@ -23,7 +35,7 @@ $(document).ready(function(){
 
     var $nav = $('#nav').find('a');
 
-    var current_hash = "home";
+    var current_hash = window.location.hash;
 
     var panels = [];
     var current_panel = null;
@@ -38,8 +50,8 @@ $(document).ready(function(){
         panels[panel_id] = t;
 
         if(i == 0) {
-            last_panel = panel_id;
-            current_panel = panel_id;
+            last_panel      = panel_id;
+            current_panel   = panel_id;
         } else {
             t.hide();
         }
@@ -78,6 +90,7 @@ $(document).ready(function(){
 
     // on click, change the panel
     $nav.click(function(e) {
+
         if ($(this).attr('href').substring(0,1) == '#') {
             e.preventDefault();
             e.stopPropagation();
@@ -86,16 +99,23 @@ $(document).ready(function(){
 
             if(article_id in panels) {
                 panels[article_id].activate_panel();
+                restore_default_glyphicons();
+                if(article_id == 'portfolio') {
+                    var $portfolio = $('nav a[href=#portfolio]');
+                    $portfolio.removeClass('fa-folder-o');
+                    $portfolio.addClass('fa-folder-open-o');
+                } else if(article_id == 'contact') {
+                    var $contact =  $('nav a[href=#contact]');
+                    $contact.removeClass('fa-envelope-o');
+                    $contact.addClass('fa-envelope-open-o');
+                }
             }
         }
     });
 
     // initialize site
     $(window).trigger('resize');
-    var hash_valid = check_hash(current_hash, panels);
-    console.log("hash: " + current_hash + ", valid: " + hash_valid);
-    if(hash_valid) {
-        // no fade on load (wrapper is fading in)
+    if(check_hash(current_hash, panels)) {
         panels[current_hash].activate_panel(true);
     }
 
