@@ -6,6 +6,86 @@ INF 133 -> Midterm Project
 /* Source sans pro font that will be used for all text */
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
 
+/* reset so nav appears normal */
+html,body,div,span,h1,h2,h3,h6,p,strong,i,article,footer,header,nav,section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, footer, nav, header, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    -webkit-text-size-adjust: none; /* issue with navigation icons */
+}
+
+
+*, *:before, *:after
+{
+    /* remain consistent across browsers */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.row::after
+{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"]
+{
+    float: left;
+    padding: 15px;
+}
+
+/* mobile phones, each column is 100% */
+[class*="col-"]
+{
+    width:100%;
+}
+
+@media only screen and (max-width: 749px)
+{
+    /* for tablets */
+    .col-m-1    { width: 8.33%;     }
+    .col-m-2    { width: 16.66%;    }
+    .col-m-3    { width: 25%;       }
+    .col-m-4    { width: 33.33%;    }
+    .col-m-5    { width: 41.66%;    }
+    .col-m-6    { width: 50%;       }
+    .col-m-7    { width: 58.33%;    }
+    .col-m-8    { width: 66.66%;    }
+    .col-m-9    { width: 75%;       }
+    .col-m-10   { width: 83.33%;    }
+    .col-m-11   { width: 91.66%;    }
+    .col-m-12   { width: 100%;      }
+}
+
+@media only screen and (min-width: 750px)
+{
+    /* for desktops */
+    .col-1      { width: 8.33%;     }
+    .col-2      { width: 16.66%;    }
+    .col-3      { width: 25%;       }
+    .col-4      { width: 33.33%;    }
+    .col-5      { width: 41.66%;    }
+    .col-6      { width: 50%;       }
+    .col-7      { width: 58.33%;    }
+    .col-8      { width: 66.66%;    }
+    .col-9      { width: 75%;       }
+    .col-10     { width: 83.33%;    }
+    .col-11     { width: 91.66%;    }
+    .col-12     { width: 100%;      }
+}
 
 
 /************************/
@@ -16,7 +96,6 @@ html
     font-family: 'Source Sans Pro', sans-serif; /* default font */
     font-weight: 300;   /* normal weight */
 }
-
 body
 {
     background: #DAE2F8; /* fallback for old browsers */
@@ -26,7 +105,6 @@ body
     background-size: auto, 100% 100%;
     color: #777777;
 }
-
 strong, h1, h2, h3, h6
 {
     font-weight: 400; /* bold weight */
@@ -39,6 +117,301 @@ strong, h1, h2, h3, h6
     display: block;
     width: 100%;
 }
+header > p {
+    color: #AAAAAA;
+}
+
+/* Font-Awesome icon positioning for navigation */
+.glyph {
+    position: relative;
+    text-decoration: none;
+}
+
+/* Navigation */
+#nav a {
+    position: relative;
+    display: inline-block;
+    color: #FFFFFF;
+    width: 1em;
+    height: 1em;
+    line-height: 0.8em;
+}
+#nav a.glyph:before {
+    padding-right: 0;
+}
+
+/* Panels */
+#main {
+    position: relative;
+    overflow: hidden;
+}
+.panel {
+    position: relative;
+}
+#home .home-picture {
+    position: relative;
+    display:block;
+}
+#footer {
+    color: #CCCCCC;
+}
+#footer a {
+    color: #DDDDDD;
+    -moz-transition: color .25s ease-in-out;
+    -webkit-transition: color .25s ease-in-out;
+    transition: color .25s ease-in-out;
+}
+#footer a:hover {
+    color: #FFFFFF;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 750px) {
+
+    /* Basic */
+    html {
+        min-width: 100%;
+        min-height: 100%;
+    }
+    body {
+        width: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        overflow-y: scroll;
+        background-attachment: fixed;
+        font-size: 14pt;
+        line-height: 1.75em;
+    }
+
+    h1 {  font-size: 2.4em;   }
+    h2 {  font-size: 1.8em;   }
+
+    header      {  margin: 0 0 1.5em 0;   }
+    header > p  {  margin: 0.5em 0 0 0;   }
+
+    #wrapper {
+        width: 45em;
+        margin: 0 auto;
+        opacity: 0.00001;
+    }
+
+    /* Navigation */
+    #nav {
+        text-align: center;
+        height: 4.25em;
+        cursor: default;
+    }
+
+    #nav a {
+        font-size: 2.5em;
+        margin: 0 0.25em 0 0.25em;
+        opacity: 0.7;
+        outline: 0;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+        transition: opacity .25s ease-in-out;
+    }
+
+    #nav a:before {  font-size: 0.8em;  }
+
+    #nav a:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: -0.75em;
+        margin-left: -0.5em;
+        border-bottom: solid 0 #ffffff;
+        border-left: solid 0.5em transparent;
+        border-right: solid 0.5em transparent;
+        -moz-transition: border-bottom-width .25s ease-in-out;
+        -webkit-transition: border-bottom-width .25s ease-in-out;
+        transition: border-bottom-width .25s ease-in-out;
+    }
+
+    #nav a:hover {  opacity: 1.0;  }
+    #nav a.active {  opacity: 1.0;  }
+    #nav a.active:after {  border-bottom-width: 0.5em;  }
+
+    /* Panels */
+    #main {
+        width: 45em;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.25);
+    }
+
+    .panel {
+        padding: 3.5em 2.5em 3.5em 2.5em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 45em;
+    }
+
+    /* Home */
+    #home {
+        padding: 0;
+        height: 20em;
+    }
+    #home .home-picture {
+        display: block;
+        position: absolute;
+        right: -1px;
+        top: 0;
+        height: 100%;
+        text-decoration: none;
+    }
+    #home .home-picture img {
+        position: relative;
+        display: block;
+        height: 100%;
+    }
+    #home header {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 53%;
+        height: 100%;
+        margin-left: 2.5em;
+    }
+    #home header > h1 {
+        position: absolute;
+        left: 0;
+        bottom: 75.5%;
+        margin: 0;
+    }
+    #home header > p {
+        position: absolute;
+        left: 0;
+        top: 40%;
+        font-size: 1em;
+        letter-spacing: -0.015em;
+        margin-top: 0;
+    }
+
+    /* Portfolio */
+    #portfolio h6 {
+        font-size: 1em;
+        letter-spacing: -0.015em;
+        text-align:center;
+        color: #888888;
+        -o-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.2s;
+    }
+    #portfolio h6:hover {
+        color: #000000;
+    }
+    #portfolio a {
+        text-decoration:none;
+        -o-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.2s;
+    }
+    #portfolio a h6 {
+        -o-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.2s;
+    }
+    #portfolio a:hover h6 {
+        color: #000000;
+    }
+
+    /* Footer */
+    #footer {
+        text-align: center;
+        padding: 2em 0 0 0;
+        font-size: 0.75em;
+    }
+}
 
 
+/* TABLET */
+@media screen and (max-width: 749px) {
 
+    /* Basic */
+    body {
+        font-size: 11pt;
+        line-height: 1.75em;
+    }
+    h1, h2 {  font-size: 1.75em;  }
+    h6 {  font-size: 1.25em;  }
+    header { margin: 0 0 1.5em 0;  }
+    header > p {  margin: 0.5em 0 0 0; }
+
+    /* Wrapper */
+    #wrapper {  padding: 7px;  }
+
+    /* Navigation */
+
+    #nav {
+        text-align: center;
+        margin: 6px 0 8px 0;
+    }
+
+    #nav a {
+        font-size: 2em;
+        opacity: 0.5;
+        outline: 0;
+        width: 1.5em;
+        height: 1.5em;
+        line-height: 1.35em;
+        margin: 0 0.25em 0 0.25em;
+    }
+
+    #nav a:active {
+        opacity: 1.0;
+    }
+
+    /* Panels */
+    #main {
+        background: none;
+    }
+
+    .panel {
+        padding: 15px 15px 15px 15px;
+        margin: 0 0 7px 0;
+        background: #ffffff;
+        box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .panel header {
+        padding-top: 1em;
+    }
+
+    /* Home */
+
+    #home .home-picture {
+        width: 100%;
+    }
+
+    #home .home-picture img {
+        display: block;
+        width: 100%;
+    }
+
+
+    #home header {
+        text-align: center;
+    }
+
+    #home header > h1 {
+        font-size: 2.15em;
+        letter-spacing: -0.025em;
+    }
+
+    #home header > p {
+        font-size: 1.25em;
+    }
+
+    /* Footer */
+
+    #footer {
+        text-align: center;
+        padding: 2em 0 0 0;
+        font-size: 0.85em;
+    }
+}

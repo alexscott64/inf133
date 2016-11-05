@@ -4,6 +4,27 @@ INF133 -> Midterm Project
 ---
 responsive.css is a fluid box/grid layout of columns
 **/
+
+/* reset so nav appears normal */
+html,body,div,span,h1,h2,h3,h6,p,strong,i,article,footer,header,nav,section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, footer, nav, header, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    -webkit-text-size-adjust: none; /* issue with navigation icons */
+}
+
+
 *
 {
     /* remain consistent across browsers */
