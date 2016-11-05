@@ -214,13 +214,13 @@ header > p {
     #home header > h1 {
         position: absolute;
         left: 0;
-        bottom: 75.5%;
+        bottom: 80%;
         margin: 0;
     }
     #home header > p {
         position: absolute;
         left: 0;
-        top: 40%;
+        top: 30%;
         font-size: 1em;
         letter-spacing: -0.015em;
         margin-top: 0;
