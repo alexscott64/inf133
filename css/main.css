@@ -125,16 +125,57 @@ header > p {
 }
 
 /* Navigation */
+
 #nav a {
-    position: relative;
     display: inline-block;
+    position: relative;
+    padding: 5px 0px 0px 0px;
     color: #FFFFFF;
     width: 1em;
     height: 1em;
     line-height: 0.8em;
 }
+
 #nav a.glyph:before {
     padding-right: 0;
+}
+
+
+
+#nav a span {
+    /* Pop-up text for navigation links */
+    display: block;
+    position: relative; /* Fixes position above nav without cutting off content */
+    background: #222222;
+    color: #FFFFFF;
+    top: -5.5em;
+    font-size: 0.3em;
+    height: 2.2em;
+    line-height: 2.2em;
+    left: 50%;
+    opacity: 0;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    -ms-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+    width: 5.75em;
+    margin-left: -2.75em;
+}
+
+#nav a span:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -0.4em;
+    left: 50%;
+    margin-left: -0.6em;
+    border-top: solid 0.6em #222222;
+    border-left: solid 0.6em transparent;
+    border-right: solid 0.6em transparent;
+}
+
+#nav a:hover span {
+    opacity: 1.0;
 }
 
 /* Panels */
@@ -189,6 +230,7 @@ header > p {
     #wrapper {
         width: 45em;
         margin: 0 auto;
+        padding: 40px 0px 0px 0px;
         opacity: 0.00001;
     }
 
@@ -250,6 +292,7 @@ header > p {
         padding: 0;
         height: 20em;
     }
+
     #home .home-picture {
         display: block;
         position: absolute;

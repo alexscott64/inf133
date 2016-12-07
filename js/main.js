@@ -17,6 +17,7 @@ function check_hash(hash, panels) {
 function restore_default_glyphicons() {
     var $portfolio = $('nav a[href=#portfolio]');
     var $contact =  $('nav a[href=#contact]');
+    var $final = $('nav a[href=#final]');
     if($portfolio.hasClass('fa-folder-open-o')) {
         $portfolio.removeClass('fa-folder-open-o');
         $portfolio.addClass('fa-folder-o');
@@ -24,6 +25,10 @@ function restore_default_glyphicons() {
     if($contact.hasClass('fa-envelope-open-o')) {
         $contact.removeClass('fa-envelope-open-o');
         $contact.addClass('fa-envelope-o');
+    }
+    if($final.hasClass('fa-comment')) {
+        $final.removeClass('fa-comment');
+        $final.addClass('fa-comment-o');
     }
 }
 
@@ -108,6 +113,10 @@ $(document).ready(function(){
                     var $contact =  $('nav a[href=#contact]');
                     $contact.removeClass('fa-envelope-o');
                     $contact.addClass('fa-envelope-open-o');
+                } else if(article_id == 'final') {
+                    var $final = $('nav a[href=#final]');
+                    $final.removeClass('fa-comment-o')
+                    $final.addClass('fa-comment');
                 }
             }
         }
