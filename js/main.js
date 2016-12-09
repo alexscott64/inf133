@@ -1,6 +1,6 @@
 /**
  Alex Scott
- INF133 -> Midterm Project
+ INF133 -> Midterm / Final Project
  **/
 
 // forces scrolling to the top

@@ -1,6 +1,6 @@
 /**
 Alex Scott
-INF 133 -> Midterm Project
+INF 133 -> Midterm / Final Project
 **/
 
 /* Source sans pro font that will be used for all text */
@@ -114,9 +114,7 @@ strong, h1, h2, h3, h6
     display: block;
     width: 100%;
 }
-header > p {
-    color: #AAAAAA;
-}
+header > p {  color: #AAAAAA;  }
 
 input, textarea {
     font-family: 'Source Sans Pro', sans-serif;
@@ -165,13 +163,9 @@ form input[type="submit"] {
     transition: background-color .25s ease-in-out;
 }
 
-form input[type="submit"]:hover {
-    background-color: #666666;
-}
+form input[type="submit"]:hover {  background-color: #666666;  }
 
-form input[type="submit"]:active {
-    background-color: #444444;
-}
+form input[type="submit"]:active {  background-color: #444444;  }
 
 /* Font-Awesome icon positioning for navigation */
 .glyph {
@@ -180,7 +174,6 @@ form input[type="submit"]:active {
 }
 
 /* Navigation */
-
 #nav a {
     display: inline-block;
     position: relative;
@@ -194,8 +187,6 @@ form input[type="submit"]:active {
 #nav a.glyph:before {
     padding-right: 0;
 }
-
-
 
 #nav a span {
     /* Pop-up text for navigation links */
@@ -229,24 +220,38 @@ form input[type="submit"]:active {
     border-right: solid 0.6em transparent;
 }
 
-#nav a:hover span {
-    opacity: 1.0;
-}
+#nav a:hover span {  opacity: 1.0;  }
 
 /* Panels */
-#main {
-    position: relative;
-}
-.panel {
-    position: relative;
-}
+#main   {   position: relative;  }
+.panel  {   position: relative;  }
+
 #home .home-picture {
     position: relative;
     display:block;
 }
-#footer {
-    color: rgba(255, 255, 255, 0.6);
+
+#final a{
+    text-decoration: none;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    transition: .2s;
+    color: #82A3D8;
 }
+
+/* Image caption */
+.caption {
+    font-size: 0.75em;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 900;
+
+}
+
+#final a:hover { color: #2C4F87; }
+
+#footer {color: rgba(255, 255, 255, 0.6);  }
 #footer a {
     color: #DDDDDD;
     -moz-transition: color .25s ease-in-out;
